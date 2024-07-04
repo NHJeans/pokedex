@@ -7,7 +7,7 @@ import React from "react";
 
 const fetchPokemonDetail = async (id: string): Promise<Pokemon> => {
   const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL;
-  const response = await axios.get(`${baseUrl}/pokemons/${id}`);
+  const response = await axios.get(`${baseUrl}/api/pokemons/${id}`);
   return response.data;
 };
 

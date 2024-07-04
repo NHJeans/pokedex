@@ -9,7 +9,6 @@ const Modal = ({ children }: { children: React.ReactNode }) => {
   const handleClose = () => {
     router.back();
   };
-  console.log("Modal");
 
   useEffect(() => {
     document.body.style.overflow = "hidden";

@@ -37,7 +37,7 @@ const PokemonDetail = ({ pokemon }: PokemonDetailProps) => {
   }
 
   return (
-    <div className="container mx-auto px-4">
+    <div className="container mx-auto px-4 font-pokemongsk">
       <div className="bg-white p-4">
         <div className="flex justify-center">
           <div className="w-32 h-32 rounded-full overflow-hidden border-2 border-gray-300">
@@ -50,10 +50,10 @@ const PokemonDetail = ({ pokemon }: PokemonDetailProps) => {
             />
           </div>
         </div>
-        <h2 className="text-2xl mt-4 text-center">{pokemon?.korean_name}</h2>
-        <p className="text-gray-600 text-center">도감번호: {pokemon?.id}</p>
-        <p className="text-gray-600 text-center">키: {pokemon?.height / 10}m</p>
-        <p className="text-gray-600 text-center">몸무게: {pokemon?.weight / 10}kg</p>
+        <h2 className="text-3xl font-bold mt-4 text-center ">{pokemon?.korean_name}</h2>
+        <p className="text-gray-600 text-center text-2xl">도감번호: {pokemon?.id}</p>
+        <p className="text-gray-600 text-center text-2xl">키: {pokemon?.height / 10}m</p>
+        <p className="text-gray-600 text-center text-2xl">몸무게: {pokemon?.weight / 10}kg</p>
         {pokemon?.cries && pokemon?.cries.latest && (
           <div className="flex justify-center mt-4">
             <audio controls className="w-full max-w-xs">
@@ -62,12 +62,12 @@ const PokemonDetail = ({ pokemon }: PokemonDetailProps) => {
           </div>
         )}
         <div className="mt-4">
-          <h3 className="text-xl">타입</h3>
+          <h3 className="text-3xl font-bold">타입</h3>
           <div className="flex flex-wrap">
             {pokemon.types.map((type, index) => (
               <span
                 key={index}
-                className={`px-4 py-2 m-1 text-white rounded ${typeColors[type.type.name.toLowerCase()]}`}
+                className={`text-2xl px-4 py-2 m-1 text-white rounded ${typeColors[type.type.name.toLowerCase()]}`}
               >
                 {type.type.korean_name}
               </span>
@@ -75,20 +75,20 @@ const PokemonDetail = ({ pokemon }: PokemonDetailProps) => {
           </div>
         </div>
         <div className="mt-4">
-          <h3 className="text-xl">특성</h3>
+          <h3 className="text-3xl font-bold">특성</h3>
           <div className="flex flex-wrap">
             {pokemon?.abilities.map((ability, index) => (
-              <p key={index} className="mr-2">
+              <p key={index} className="mr-2 text-2xl">
                 {ability?.ability.korean_name}
               </p>
             ))}
           </div>
         </div>
         <div className="mt-4">
-          <h3 className="text-xl">기술</h3>
+          <h3 className="text-3xl font-bold">기술</h3>
           <div className="flex flex-wrap">
             {pokemon?.moves.slice(0, 30).map((move, index) => (
-              <p key={index} className="mr-2">
+              <p key={index} className="mr-2 text-2xl">
                 {move?.move.korean_name}
               </p>
             ))}
