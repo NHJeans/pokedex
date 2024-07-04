@@ -2,16 +2,10 @@ import { Pokemon } from "@/app/model/pokemon.type";
 import axios from "axios";
 import PokemonDetail from "@/app/_components/PokemonDetail";
 import Modal from "@/app/_components/Modal";
-// import { Metadata } from "next";
-
-// export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
-//   return {
-//     title: `포켓몬 도감 - ${params.id}`,
-//   };
-// }
 
 const fetchPokemonDetail = async (id: string): Promise<Pokemon> => {
-  const response = await axios.get(`http://localhost:3001/api/pokemons/${id}`);
+  const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL;
+  const response = await axios.get(`${baseUrl}/pokemons/${id}`);
   return response.data;
 };
 

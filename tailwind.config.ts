@@ -9,7 +9,11 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        "home-background": "url('/background.jpeg')",
+        "home-background": "url('/pxfuel.jpg')",
+      },
+      fontFamily: {
+        pixelify: ["PixelifySans", "sans-serif"],
+        pokemongsk: ["PokemonGSK", "sans-serif"],
       },
     },
   },

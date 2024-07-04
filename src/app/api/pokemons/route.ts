@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import axios, { AxiosResponse } from "axios";
 import { PokemonInterface, SpeciesInterface } from "@/app/model/pokemon.type";
 
-const POKEMON_PAGE = 12;
+const POKEMON_PAGE = 18;
 
 export const GET = async (request: Request) => {
   const { searchParams } = new URL(request.url);

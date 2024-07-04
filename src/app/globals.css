@@ -3,3 +3,20 @@
 @tailwind utilities;
 @layer utilities {
 }
+@font-face {
+  font-family: 'PixelifySans';
+  src: url('/fonts/PixelifySans-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PokemonGSK';
+  src: url('/fonts/PokemonGSK.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'PokemonGSK', sans-serif;
+}
