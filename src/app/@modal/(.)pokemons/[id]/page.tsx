@@ -5,8 +5,8 @@ import Modal from "@/app/_components/Modal";
 
 const fetchPokemonDetail = async (id: string): Promise<Pokemon> => {
   const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL;
-  const response = await axios.get(`${baseUrl}/api/pokemons/${id}`);
-  return response.data;
+  const response = await fetch(`${baseUrl}/api/pokemons/${id}`);
+  return response.json();
 };
 
 const PokemonDetailModalPage = async ({ params }: { params: { id: string } }) => {
