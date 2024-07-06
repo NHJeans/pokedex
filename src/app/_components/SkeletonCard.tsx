@@ -2,12 +2,14 @@ import React from "react";
 
 const SkeletonCard = () => {
   return (
-    <div className="bg-white p-4 rounded shadow animate-pulse flex flex-col">
-      <div className="aspect-[2/1] w-full overflow-hidden rounded">
+    <div className="w-4/5 max-w-xs rounded-md flex flex-col shadow-lg border border-white aspect-[10/11] justify-center items-center animate-pulse">
+      <div className="aspect-square w-3/5 overflow-hidden relative flex justify-center items-center">
         <div className="bg-gray-300 h-full w-full"></div>
       </div>
-      <div className="mt-2 h-5 bg-gray-300 rounded"></div>
-      <div className="mt-2 h-6 bg-gray-300 rounded"></div>
+      <div className="flex flex-row justify-center mt-5">
+        <div className="h-5 w-12 bg-gray-300 rounded mr-2"></div>
+        <div className="h-5 w-12 bg-gray-300 rounded"></div>
+      </div>
     </div>
   );
 };

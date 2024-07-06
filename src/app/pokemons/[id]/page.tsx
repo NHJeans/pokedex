@@ -8,7 +8,8 @@ import React from "react";
 const fetchPokemonDetail = async (id: string): Promise<Pokemon> => {
   const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL;
   const response = await fetch(`${baseUrl}/api/pokemons/${id}`);
-  return response.json();
+  const data = await response.json();
+  return data;
 };
 
 const PokemonDetailPage = async ({ params }: { params: { id: string } }) => {

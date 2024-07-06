@@ -15,8 +15,9 @@ const TOTAL_POKEMON = 1025;
 const POKEMON_PAGE = 18;
 
 const fetchPokemons = async (page: number): Promise<Pokemon[]> => {
-  const response = await axios.get(`/api/pokemons`, { params: { page } });
-  return response.data;
+  const response = await fetch(`/api/pokemons?page=${page}`);
+  const data = await response.json();
+  return data;
 };
 
 const PokemonList = () => {
